@@ -1,21 +1,17 @@
 import { createAction } from '@reduxjs/toolkit';
 
-export const addNumber = createAction('contact/addNumber');
+// export const addNumber = createAction('contact/addNumber');
 export const delNumber = createAction('contact/delNumber');
 export const filters = createAction('contact/filter');
 
-// export const addNumber = obj => ({
-//   type: 'contact/addNumber',
-//   payload: obj,
-// });
+export const fetchContactRequest = createAction('contact/fetchContactRequest');
+export const fetchContactSuccess = createAction('contact/fetchContactSuccess');
+export const fetchContactError = createAction('contact/fetchContactError');
 
-// export const delNumber = id => ({
-//   type: 'contact/delNumber',
-//   payload: id,
-// });
+export const addContactRequest = createAction('contact/addContactRequest');
+export const addContactSuccess = createAction('contact/addContactSuccess');
+export const addContactError = createAction('contact/addContactError');
 
-// export const filter = value => ({
-//   type: 'contact/filter',
-//   payload: value,
-// });
-// export { addNumber, delNumber, filters };
+export const delContactRequest = createAction('contact/delContactRequest');
+export const delContactSuccess = createAction('contact/delContactSuccess');
+export const delContactError = createAction('contact/delContactError');

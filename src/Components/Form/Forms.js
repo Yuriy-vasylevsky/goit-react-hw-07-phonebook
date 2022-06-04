@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 import { nanoid } from 'nanoid';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addNumber } from '../../redux/contact/contact-action';
+import { addContact } from '../../redux/contact/contact-operations';
 import { getItems } from '../../redux/contact/contact-selectors';
 
 export default function Forms() {
@@ -46,7 +46,7 @@ export default function Forms() {
       return alert('Это имя уже есть в списке контактов');
     }
 
-    dispatch(addNumber(obj));
+    dispatch(addContact(obj));
 
     restForm();
   };

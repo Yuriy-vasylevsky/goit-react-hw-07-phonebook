@@ -2,8 +2,8 @@ import './PhoneList.css';
 import Button from 'react-bootstrap/Button';
 import { getFilteredContact } from '../../redux/contact/contact-selectors';
 import { useDispatch, useSelector } from 'react-redux';
-import { delNumber } from '../../redux/contact/contact-action';
-
+// import { delContactSuccess } from '../../redux/contact/contact-action';
+import { delContact } from '../../redux/contact/contact-operations';
 export default function PhoneList() {
   const dispatch = useDispatch();
   const filteredContact = useSelector(getFilteredContact);
@@ -17,7 +17,7 @@ export default function PhoneList() {
               {item.name} : {item.number}
               <Button
                 className="btn-my"
-                onClick={() => dispatch(delNumber(item.id))}
+                onClick={() => dispatch(delContact(item.id))}
                 variant="primary"
               >
                 Удалить
